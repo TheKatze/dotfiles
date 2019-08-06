@@ -1,0 +1,10 @@
+*
+!.gitignore
+!nvim/
+!rofi/
+!compton/
+!i3/
+!gtk-3.0/
+!polybar/
+!termite/
+
