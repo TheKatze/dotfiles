@@ -99,6 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim='nvim'
+alias v='nvim'
+
+alias vimrc='nvim .config/nvim/init.vim'
+
 alias vpn='sudo openvpn --config ~/.vpn/leo.ovpn'
 alias kc='kubectl'
 
@@ -127,3 +131,4 @@ eval
 
 eval $(thefuck --alias)
 alias dwarffortress="dfhack"
+
