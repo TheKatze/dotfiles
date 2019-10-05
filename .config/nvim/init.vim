@@ -33,7 +33,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
 
 " Autocomplete
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/deoplete.nvim'
 
 Bundle 'wellle/targets.vim'
 
@@ -43,7 +43,40 @@ filetype plugin indent on    " required
 
 let g:airline_theme='deus'
 
+"
 " vim config
+"
+
 set number
 set relativenumber
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+" 
+" NERDTree
+"
+
+map <C-n> :NERDTreeToggle<CR>
+
+" Close if only window is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+"
+" deoplete
+"
+
+let g:deoplete#enable_at_startup = 1
+set completeopt+=noinsert
+
+call deoplete#custom#option('ignore_case', v:true)
+
+if has("patch-7.4.314")
+    set shortmess+=c
+endif
 
