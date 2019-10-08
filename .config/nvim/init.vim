@@ -63,6 +63,11 @@ noremap <Right> <nop>
 set number
 set relativenumber
 
+" no swap file
+set noswapfile
+set nobackup
+set nowb
+
 filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -78,7 +83,7 @@ let mapleader = "\<Space>"
 " Airline
 "
 
-let g:airline_theme='deus'
+let g:airline_theme='bubblegum'
 
 " 
 " NERDTree
@@ -92,6 +97,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+let NERDTreeShowHidden = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+
 "
 " deoplete
 "
@@ -102,7 +112,7 @@ set completeopt+=noinsert
 call deoplete#custom#option('ignore_case', v:true)
 
 "
-" deoplete
+" syntastic
 "
 
 set statusline+=%#warningmsg#
