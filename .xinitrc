@@ -35,5 +35,7 @@ fi
 setxkbmap de
 setxkbmap -option caps:escape
 
+wal -R
+
 i3
 

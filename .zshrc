@@ -98,10 +98,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Load wal colourscheme
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
+# aliases
 alias vim='nvim'
 alias v='nvim'
 
-alias vimrc='nvim .config/nvim/init.vim'
+alias vimrc='nvim ~/.config/nvim/init.vim'
 
 alias vpn='sudo openvpn --config ~/.vpn/leo.ovpn'
 alias kc='kubectl'
